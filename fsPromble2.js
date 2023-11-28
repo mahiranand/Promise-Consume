@@ -39,7 +39,6 @@ const fsProblem2 = (filePath) => {
     })
     .then((data) => {
       data = data.split("\n");
-      console.log(data);
       for( let file of data) {
         fs.unlink(file);
       }
@@ -48,4 +47,4 @@ const fsProblem2 = (filePath) => {
       console.log(err);
     });
 };
-fsProblem2("lipsum.txt");
+module.exports.fsProblem2 = fsProblem2;
